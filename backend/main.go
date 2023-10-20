@@ -4,6 +4,8 @@ import (
 	// "log"
 	"os"
 
+	"backend/routes"
+
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -26,6 +28,7 @@ func main() {
     app.Get("/", func(c *fiber.Ctx) error {
         return c.SendString("Hello, World 👋!")
     })
+    routes.PostsRoutes(app)
 
     app.Listen(getPort())
     // log.Fatal(app.Listen(":3000"))
