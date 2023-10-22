@@ -24,7 +24,19 @@ func PostsRoutes(a *fiber.App) {
 	})
 	
 	route.Delete("/:id", func(c *fiber.Ctx) error {
-		return c.SendString("Delete post by id")
+		return c.SendString("Delete post by id: " + c.Params("id"))
+	})
+
+	route.Get("/category/:categoryId", func(c *fiber.Ctx) error {
+		return c.SendString("Get posts by category id: " + c.Params("categoryId"))
+	})
+
+	route.Get("/subcategory/:subcategoryId", func(c *fiber.Ctx) error {
+		return c.SendString("Get posts by subcategory id: " + c.Params("subcategoryId"))
+	})
+
+	route.Get("/user/:userId", func(c *fiber.Ctx) error {
+		return c.SendString("Get posts by user id: " + c.Params("userId"))
 	})
 
 }
