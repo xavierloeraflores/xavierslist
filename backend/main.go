@@ -29,6 +29,7 @@ func main() {
         return c.SendString("Hello, World 👋!")
     })
     routes.PostsRoutes(app)
+    routes.CategoriesRoutes(app)
 
     app.Listen(getPort())
     // log.Fatal(app.Listen(":3000"))
