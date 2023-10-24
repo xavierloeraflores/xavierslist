@@ -11,12 +11,14 @@ func CategoriesRoutes(a *fiber.App) {
 		return c.SendString("Get all categories")
 	})
 
-	route.Get("/:id", func(c *fiber.Ctx) error {
-		return c.SendString("Get category by id")
+	route.Get("/:categoryId", func(c *fiber.Ctx) error {
+		categoryId := c.Params("categoryId")
+		return c.SendString("Get category by id: " + categoryId)
 	})
 
 	route.Get("/:id/subcategories", func(c *fiber.Ctx) error {
-		return c.SendString("Get subcategories by category id")
+		categoryId := c.Params("categoryId")
+		return c.SendString("Get subcategories by category id: " + categoryId)
 	})
 
 
