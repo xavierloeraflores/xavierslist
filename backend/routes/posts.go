@@ -10,38 +10,18 @@ func PostsRoutes(a *fiber.App) {
 
 	route.Get("/", handlers.GetPosts)
 
-	route.Post("/", func(c *fiber.Ctx) error {
-		return c.SendString("Posted to posts:\n" + string(c.Body()))
-	})
+	route.Post("/", handlers.PostPost)
 
-	route.Get("/:postId", func(c *fiber.Ctx) error {
-		postId := c.Params("postId")
-		return c.SendString("Get post by id  " + postId)
-	})
+	route.Get("/:postId", handlers.GetPostByPostId)
 
-	route.Put("/:postId", func(c *fiber.Ctx) error {
-		postId := c.Params("postId")
-		return c.SendString("Update post by id:\n"+ postId + string(c.Body()))
-	})
+	route.Put("/:postId", handlers.UpdatePostByPostId)
 	
-	route.Delete("/:postId", func(c *fiber.Ctx) error {
-		postId := c.Params("postId")
-		return c.SendString("Delete post by id: "+ postId + c.Params("id"))
-	})
+	route.Delete("/:postId", handlers.DeletePostsByPostId)
 
-	route.Get("/category/:categoryId", func(c *fiber.Ctx) error {
-		categoryId := c.Params("categoryId")
-		return c.SendString("Get posts by category id: "+ categoryId + c.Params("categoryId"))
-	})
+	route.Get("/category/:categoryId", handlers.GetPostsByCategoryId)
 
-	route.Get("/subcategory/:subcategoryId", func(c *fiber.Ctx) error {
-		subcategoryId := c.Params("subcategoryId")
-		return c.SendString("Get posts by subcategory id: "+ subcategoryId + c.Params("subcategoryId"))
-	})
+	route.Get("/subcategory/:subcategoryId", handlers.GetPostsBySubcategoryId)
 
-	route.Get("/user/:userId", func(c *fiber.Ctx) error {
-		userId := c.Params("userId")
-		return c.SendString("Get posts by user id: " + userId + c.Params("userId"))
-	})
+	route.Get("/user/:userId", handlers.GetPostsByUserId)
 
 }
