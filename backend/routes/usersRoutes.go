@@ -7,7 +7,7 @@ import (
 )
 
 func UsersRoutes(a *fiber.App) {
-	route := a.Group("/api/v1/categories")
+	route := a.Group("/api/v1/users")
 
 	route.Get("/", handlers.GetAllUsers)
 
