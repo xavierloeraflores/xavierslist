@@ -24,20 +24,20 @@ func UpdatePostByPostId(c *fiber.Ctx) error {
 
 func DeletePostsByPostId(c *fiber.Ctx) error {
 	postId := c.Params("postId")
-	return c.SendString("Delete post by id: "+ postId + c.Params("id"))
+	return c.SendString("Delete post by id: "+ postId)
 }
 
  func GetPostsByCategoryId(c *fiber.Ctx) error {
 	categoryId := c.Params("categoryId")
-	return c.SendString("Get posts by category id: "+ categoryId + c.Params("categoryId"))
+	return c.SendString("Get posts by category id: "+ categoryId)
 }
 
 func GetPostsBySubcategoryId(c *fiber.Ctx) error {
 	subcategoryId := c.Params("subcategoryId")
-	return c.SendString("Get posts by subcategory id: "+ subcategoryId + c.Params("subcategoryId"))
+	return c.SendString("Get posts by subcategory id: "+ subcategoryId)
 }
 
 func GetPostsByUserId(c *fiber.Ctx) error {
 	userId := c.Params("userId")
-	return c.SendString("Get posts by user id: " + userId + c.Params("userId"))
+	return c.SendString("Get posts by user id: " + userId)
 }
