@@ -2,10 +2,9 @@ package routes
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"backend/handlers"
 )
 
-func CategoriesRoutes(a *fiber.App) {
+func UsersRoutes(a *fiber.App) {
 	route := a.Group("/api/v1/categories")
 
 	route.Get("/", func(c *fiber.Ctx) error {
