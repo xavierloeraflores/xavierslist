@@ -1,30 +1,22 @@
 package routes
 
 import (
+	"backend/handlers"
+
 	"github.com/gofiber/fiber/v2"
 )
 
 func UsersRoutes(a *fiber.App) {
 	route := a.Group("/api/v1/categories")
 
-	route.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Get Users")
-	})
+	route.Get("/", handlers.GetAllUsers)
 
-	route.Post("/",func(c *fiber.Ctx) error {
-		return c.SendString("Post User")
-	})
+	route.Post("/", handlers.PostUser)
 
-	route.Get("/user/:userId",func(c *fiber.Ctx) error {
-		return c.SendString("Get User by userId")
-	})
+	route.Get("/user/:userId", handlers.GetUserByUserId)
 
-	route.Put("/user/:userId",func(c *fiber.Ctx) error {
-		return c.SendString("Edit User by userId")
-	})
+	route.Put("/user/:userId", handlers.UpdateUserByUserId)
 
-	route.Delete("/user/:userId",func(c *fiber.Ctx) error {
-		return c.SendString("Delete User by userId")
-	})
+	route.Delete("/user/:userId", handlers.DeleteUserByUserId)
 
 }
