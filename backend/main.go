@@ -30,6 +30,7 @@ func main() {
     })
     routes.PostsRoutes(app)
     routes.CategoriesRoutes(app)
+	routes.UsersRoutes(app)
 
     app.Listen(getPort())
     // log.Fatal(app.Listen(":3000"))
