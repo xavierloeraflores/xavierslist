@@ -2,14 +2,13 @@ package routes
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"backend/handlers"
 )
 
 func PostsRoutes(a *fiber.App) {
 	route := a.Group("/api/v1/posts")
 
-	route.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello World from posts")
-	})
+	route.Get("/", handlers.GetPosts)
 
 	route.Post("/", func(c *fiber.Ctx) error {
 		return c.SendString("Posted to posts:\n" + string(c.Body()))
