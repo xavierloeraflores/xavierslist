@@ -2,24 +2,17 @@ package routes
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"backend/handlers"
 )
 
 func CategoriesRoutes(a *fiber.App) {
 	route := a.Group("/api/v1/categories")
 
-	route.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Get all categories")
-	})
+	route.Get("/", handlers.GetAllCategories)
 
-	route.Get("/:categoryId", func(c *fiber.Ctx) error {
-		categoryId := c.Params("categoryId")
-		return c.SendString("Get category by id: " + categoryId)
-	})
+	route.Get("/:categoryId", handlers.GetCategoryByCategoryId)
 
-	route.Get("/:id/subcategories", func(c *fiber.Ctx) error {
-		categoryId := c.Params("categoryId")
-		return c.SendString("Get subcategories by category id: " + categoryId)
-	})
+	route.Get("/:id/subcategories", handlers.GetSubcategoriesByCategoryId)
 
 
 }
