@@ -2,6 +2,7 @@ package main
 
 import (
 	// "log"
+	"fmt"
 	"os"
 
 	"backend/database"
@@ -27,7 +28,7 @@ func getPort() string {
 func loadENV() {
     err := godotenv.Load(".env")
     if err != nil {
-        panic("Error loading .env file")
+        fmt.Print("Error loading .env file")
     }
 }
 
