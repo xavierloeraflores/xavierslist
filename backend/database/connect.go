@@ -12,8 +12,18 @@ import (
 
 var DB *gorm.DB
 
+func getMySQLDialector(host, user, password, dbname string, port uint64 ) gorm.Dialector{
+
+	// EXAMPLE MySQL :"user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", user, password, host, port, dbname)
+	return mysql.Open(dsn)
+}
+
+
+
 func ConnectDB() {
-    var err error
+	var err error
+
     p := os.Getenv("DB_PORT")
 	port, err := strconv.ParseUint(p, 10, 32)
     if err != nil {
@@ -24,10 +34,9 @@ func ConnectDB() {
 	password := os.Getenv("DB_PASSWORD")
 	dbname := os.Getenv("DB_NAME")
 
-    dsn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
+	dialector := getMySQLDialector(host, user, password, dbname, port)
 
-	
-    DB, err = gorm.Open(mysql.Open(dsn))
+    DB, err = gorm.Open(dialector)
 
     if err != nil {
         panic("failed to connect database")
