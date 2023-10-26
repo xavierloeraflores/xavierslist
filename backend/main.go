@@ -2,13 +2,13 @@ package main
 
 import (
 	// "log"
-
 	"os"
 
 	"backend/database"
 	"backend/routes"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/joho/godotenv"
 )
 
 
@@ -24,7 +24,15 @@ func getPort() string {
 	return port
 }
 
+func loadENV() {
+    err := godotenv.Load(".env")
+    if err != nil {
+        panic("Error loading .env file")
+    }
+}
+
 func main() {
+    loadENV()
     app := fiber.New()
 
     database.ConnectDB()
