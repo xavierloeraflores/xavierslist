@@ -22,7 +22,7 @@ func ConnectDB() {
 	host := os.Getenv("DB_HOST")
 	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")
-	dbname := os.Getenv("DB_Name")
+	dbname := os.Getenv("DB_NAME")
 
     dsn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 
