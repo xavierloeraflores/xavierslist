@@ -5,7 +5,10 @@ import (
 )
 
 type Post struct {
-	gorm.Model
-	Title string
+	gorm.Model `gorm:"embedded"`
+	title string
+	content string
+	userId uint
+
 	
 }
