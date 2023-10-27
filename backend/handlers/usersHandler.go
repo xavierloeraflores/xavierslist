@@ -1,6 +1,10 @@
 package handlers
 
 import (
+	"backend/database"
+	"backend/models"
+	"fmt"
+
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -15,7 +19,10 @@ func PostUser(c *fiber.Ctx) error {
 
 func GetUserByUserId(c *fiber.Ctx) error {
 	userId := c.Params("userId")
-	return c.SendString("Get User by userId: " + userId)
+	user := models.User{}
+	database.DB.First(&user,"ID = ?", userId)
+	fmt.Println(user)
+	return c.SendString("Get User by userId: " + userId + "\n" + user.CreatedAt.String())
 }
 
 func UpdateUserByUserId(c *fiber.Ctx) error {
