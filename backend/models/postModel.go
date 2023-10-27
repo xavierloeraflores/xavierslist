@@ -10,6 +10,6 @@ type Post struct {
 	content string
 	userId uint
 	subcategoryId uint
-
-	
+	public bool `gorm:"default:false"`
+	Location uint
 }
