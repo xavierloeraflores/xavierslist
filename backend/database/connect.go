@@ -21,15 +21,6 @@ func getMySQLDialector(host, user, password, dbname string, port uint64 ) gorm.D
 	return mysql.Open(dsn)
 }
 
-func autoMigrate(){
-	DB.AutoMigrate(&models.Category{})
-	DB.AutoMigrate(&models.Location{})
-	DB.AutoMigrate(&models.Post{})
-	DB.AutoMigrate(&models.Site{})
-	DB.AutoMigrate(&models.Subcategory{})
-	DB.AutoMigrate(&models.User{})
-
-}
 
 
 func ConnectDB() {
@@ -54,4 +45,9 @@ func ConnectDB() {
     }
 
     fmt.Println("Connection Opened to Database")
+	err = DB.AutoMigrate(&models.User{}, &models.Post{}, &models.Category{}, &models.Subcategory{}, &models.Location{}, &models.Site{})
+	if err != nil {
+		panic("failed to migrate database")
+	}
+	fmt.Println("Successful Database Migration")
 }
