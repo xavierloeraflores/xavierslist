@@ -7,10 +7,11 @@ import (
 )
 
 type User struct {
-	gorm.Model
+	gorm.Model 	`gorm:"embedded"`
 	username string `gorm:"unique"`
 	password []byte 
 	email string `gorm:"unique"`
+	posts []Post `gorm:"foreignKey:userId"`
 }
 
 
