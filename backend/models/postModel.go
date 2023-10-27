@@ -9,6 +9,7 @@ type Post struct {
 	title string
 	content string
 	userId uint
+	subcategoryId uint
 
 	
 }
