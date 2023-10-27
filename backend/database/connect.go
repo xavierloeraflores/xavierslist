@@ -8,6 +8,8 @@ import (
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+
+	"backend/models"
 )
 
 var DB *gorm.DB
@@ -19,6 +21,15 @@ func getMySQLDialector(host, user, password, dbname string, port uint64 ) gorm.D
 	return mysql.Open(dsn)
 }
 
+func autoMigrate(){
+	DB.AutoMigrate(&models.Category{})
+	DB.AutoMigrate(&models.Location{})
+	DB.AutoMigrate(&models.Post{})
+	DB.AutoMigrate(&models.Site{})
+	DB.AutoMigrate(&models.Subcategory{})
+	DB.AutoMigrate(&models.User{})
+
+}
 
 
 func ConnectDB() {
