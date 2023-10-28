@@ -11,7 +11,7 @@ type User struct {
 	Username string `gorm:"unique"`
 	Password []byte 
 	Email string `gorm:"unique"`
-	Posts []Post `gorm:"foreignKey:userId"`
+	Posts []Post `gorm:"foreignKey:UserId"`
 }
 
 

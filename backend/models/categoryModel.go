@@ -8,5 +8,5 @@ import (
 type Category struct {
 	gorm.Model `gorm:"embedded"`
 	Name string
-	Subcategories []Subcategory `gorm:"foreignKey:categoryId"`
+	Subcategories []Subcategory `gorm:"foreignKey:CategoryId"`
 }
