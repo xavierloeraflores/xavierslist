@@ -13,10 +13,10 @@ func UsersRoutes(a *fiber.App) {
 
 	route.Post("/", handlers.PostUser)
 
-	route.Get("/user/:userId", handlers.GetUserByUserId)
+	route.Get("/:userId", handlers.GetUserByUserId)
 
-	route.Put("/user/:userId", handlers.UpdateUserByUserId)
+	route.Put("/:userId", handlers.UpdateUserByUserId)
 
-	route.Delete("/user/:userId", handlers.DeleteUserByUserId)
+	route.Delete("/:userId", handlers.DeleteUserByUserId)
 
 }
