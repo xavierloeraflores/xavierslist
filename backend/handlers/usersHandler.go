@@ -3,7 +3,6 @@ package handlers
 import (
 	"backend/database"
 	"backend/models"
-	"fmt"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -21,8 +20,19 @@ func GetUserByUserId(c *fiber.Ctx) error {
 	userId := c.Params("userId")
 	user := models.User{}
 	database.DB.First(&user,"ID = ?", userId)
-	fmt.Println(user)
-	return c.SendString("Get User by userId: " + userId + "\n" + user.CreatedAt.String())
+	
+	if (user.ID == 0) {
+		return c.Status(404).JSON(fiber.Map{
+			"status": "error",
+			"message": "User not found",
+			"data": nil,
+		})
+	}
+
+	return c.JSON(fiber.Map{
+		"status": "success", 
+		"message": "User found", "data": user,
+	})
 }
 
 func UpdateUserByUserId(c *fiber.Ctx) error {
