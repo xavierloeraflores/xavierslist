@@ -59,5 +59,29 @@ func UpdateUserByUserId(c *fiber.Ctx) error {
 
 func DeleteUserByUserId(c *fiber.Ctx) error {
 	userId := c.Params("userId")
-	return c.SendString("Delete User by userId: " + userId)
+	user := models.User{}
+	database.DB.First(&user,"ID = ?", userId)
+	
+	if (user.ID == 0) {
+		return c.Status(404).JSON(fiber.Map{
+			"status": "error",
+			"message": "User not found",
+			"data": nil,
+		})
+	}
+
+	err := database.DB.Delete(&user, "id=?", userId).Error
+
+	if err != nil {
+		return c.Status(500).JSON(fiber.Map{
+			"status": "error",
+			"message": "User not deleted",
+			"data": nil,
+		})
+	}
+
+	return c.JSON(fiber.Map{
+		"status": "success", 
+		"message": "User deleted",
+	})
 }
