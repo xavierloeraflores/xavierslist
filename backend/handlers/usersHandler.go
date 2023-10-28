@@ -35,9 +35,9 @@ func PostUser(c *fiber.Ctx) error {
 func GetUserByUserId(c *fiber.Ctx) error {
 	userId := c.Params("userId")
 	user := models.User{}
-	database.DB.First(&user,"ID = ?", userId)
+	result := database.DB.First(&user,"ID = ?", userId)
 	
-	if (user.ID == 0) {
+	if (result.Error != nil) {
 		return c.Status(404).JSON(fiber.Map{
 			"status": "error",
 			"message": "User not found",
@@ -60,9 +60,9 @@ func UpdateUserByUserId(c *fiber.Ctx) error {
 func DeleteUserByUserId(c *fiber.Ctx) error {
 	userId := c.Params("userId")
 	user := models.User{}
-	database.DB.First(&user,"ID = ?", userId)
+	result := database.DB.First(&user,"ID = ?", userId)
 	
-	if (user.ID == 0) {
+	if (result.Error != nil) {
 		return c.Status(404).JSON(fiber.Map{
 			"status": "error",
 			"message": "User not found",
