@@ -8,7 +8,23 @@ import (
 )
 
 func GetAllUsers(c *fiber.Ctx) error {
-	return c.SendString("Get Users")
+	users := []models.User{}
+	database.DB.Find(&users)
+
+	if (len(users) == 0) {
+		return c.Status(500).JSON(fiber.Map{
+			"status": "error",
+			"message": "No users found",
+			"data": nil,
+		})
+
+	}
+
+	return c.JSON(fiber.Map{
+		"status": "success",
+		"message": "All users found",
+		"data": users,
+	})
 }
 
 func PostUser(c *fiber.Ctx) error {
