@@ -1,6 +1,9 @@
 package handlers
 
 import (
+	"backend/database"
+	"backend/models"
+
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -14,7 +17,22 @@ func PostPost(c *fiber.Ctx) error {
 
 func GetPostByPostId(c *fiber.Ctx) error {
 	postId := c.Params("postId")
-	return c.SendString("Get post by id  " + postId)
+	post := models.Post{}
+	result := database.DB.First(&post,"ID = ?", postId)
+	
+	if (result.Error != nil) {
+		return c.Status(404).JSON(fiber.Map{
+			"status": "error",
+			"message": "Post not found",
+			"data": nil,
+		})
+	}
+
+	return c.JSON(fiber.Map{
+		"status": "success", 
+		"message": "User found", "data": post,
+	})
+
 }
 
 func UpdatePostByPostId(c *fiber.Ctx) error {
