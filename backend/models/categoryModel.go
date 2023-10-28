@@ -7,6 +7,6 @@ import (
 
 type Category struct {
 	gorm.Model `gorm:"embedded"`
-	name string
-	subcategories []Subcategory `gorm:"foreignKey:categoryId"`
+	Name string
+	Subcategories []Subcategory `gorm:"foreignKey:categoryId"`
 }

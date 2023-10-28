@@ -6,6 +6,6 @@ import (
 
 type Subcategory struct {
 	gorm.Model `gorm:"embedded"`
-	name string
-	categoryId uint
+	Name string
+	CategoryId uint
 }

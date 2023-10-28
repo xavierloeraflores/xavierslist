@@ -7,6 +7,6 @@ import (
 
 type Location struct {
 	gorm.Model `gorm:"embedded"`
-	name string
-	siteId uint
+	Name string
+	SiteId uint
 }
