@@ -42,7 +42,30 @@ func UpdatePostByPostId(c *fiber.Ctx) error {
 
 func DeletePostsByPostId(c *fiber.Ctx) error {
 	postId := c.Params("postId")
-	return c.SendString("Delete post by id: "+ postId)
+	post := models.Post{}
+	result := database.DB.First(&post,"ID = ?", postId)
+	
+	if (result.Error != nil) {
+		return c.Status(404).JSON(fiber.Map{
+			"status": "error",
+			"message": "Post not found",
+			"data": nil,
+		})
+	}
+
+	err := database.DB.Delete(&post).Error
+
+	if (err != nil) {
+		return c.Status(500).JSON(fiber.Map{
+			"status": "error",
+			"message": "Post not deleted",
+		})
+	}
+
+	return c.JSON(fiber.Map{
+		"status": "success", 
+		"message": "Post deleted",
+	})
 }
 
  func GetPostsByCategoryId(c *fiber.Ctx) error {
