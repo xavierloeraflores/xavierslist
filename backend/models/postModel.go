@@ -6,10 +6,10 @@ import (
 
 type Post struct {
 	gorm.Model `gorm:"embedded"`
-	title string
-	content string
-	userId uint
-	subcategoryId uint
-	public bool `gorm:"default:false"`
+	Title string
+	Content string
+	UserId uint
+	SubcategoryId uint
+	Public bool `gorm:"default:false"`
 	Location uint
 }
