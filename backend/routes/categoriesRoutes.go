@@ -1,8 +1,9 @@
 package routes
 
 import (
-	"github.com/gofiber/fiber/v2"
 	"backend/handlers"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func CategoriesRoutes(a *fiber.App) {
