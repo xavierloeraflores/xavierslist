@@ -3,7 +3,6 @@ package handlers
 import (
 	"backend/database"
 	"backend/models"
-	"fmt"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -97,7 +96,6 @@ func GetPostsByUserId(c *fiber.Ctx) error {
 	result = database.DB.Find(&posts)
 
 	if (result.Error != nil){
-		fmt.Print(result.Error)
 		return c.Status(500).JSON(fiber.Map{
 			"status": "error",
 			"message": "Could not retrieve posts",
