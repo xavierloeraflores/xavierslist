@@ -16,7 +16,7 @@ func PostsRoutes(a *fiber.App) {
 	route.Get("/:postId", handlers.GetPostByPostId)
 
 	route.Put("/:postId", handlers.UpdatePostByPostId)
-	
+
 	route.Delete("/:postId", handlers.DeletePostsByPostId)
 
 	route.Get("/category/:categoryId", handlers.GetPostsByCategoryId)

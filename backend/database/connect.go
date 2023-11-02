@@ -14,23 +14,21 @@ import (
 
 var DB *gorm.DB
 
-func getMySQLDialector(host, user, password, dbname string, port uint64 ) gorm.Dialector{
+func getMySQLDialector(host, user, password, dbname string, port uint64) gorm.Dialector {
 
 	// EXAMPLE MySQL :"user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", user, password, host, port, dbname)
 	return mysql.Open(dsn)
 }
 
-
-
 func ConnectDB() {
 	var err error
 
-    p := os.Getenv("DB_PORT")
+	p := os.Getenv("DB_PORT")
 	port, err := strconv.ParseUint(p, 10, 32)
-    if err != nil {
-        log.Println("Error")
-    }
+	if err != nil {
+		log.Println("Error")
+	}
 	host := os.Getenv("DB_HOST")
 	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")
@@ -38,13 +36,13 @@ func ConnectDB() {
 
 	dialector := getMySQLDialector(host, user, password, dbname, port)
 
-    DB, err = gorm.Open(dialector)
+	DB, err = gorm.Open(dialector)
 
-    if err != nil {
-        panic("failed to connect database")
-    }
+	if err != nil {
+		panic("failed to connect database")
+	}
 
-    fmt.Println("Connection Opened to Database")
+	fmt.Println("Connection Opened to Database")
 	err = DB.AutoMigrate(&models.User{}, &models.Post{}, &models.Category{}, &models.Subcategory{}, &models.Location{}, &models.Site{})
 	if err != nil {
 		panic("failed to migrate database")

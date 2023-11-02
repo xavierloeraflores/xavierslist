@@ -18,18 +18,18 @@ func PostPost(c *fiber.Ctx) error {
 func GetPostByPostId(c *fiber.Ctx) error {
 	postId := c.Params("postId")
 	post := models.Post{}
-	result := database.DB.First(&post,"ID = ?", postId)
-	
-	if (result.Error != nil) {
+	result := database.DB.First(&post, "ID = ?", postId)
+
+	if result.Error != nil {
 		return c.Status(404).JSON(fiber.Map{
-			"status": "error",
+			"status":  "error",
 			"message": "Post not found",
-			"data": nil,
+			"data":    nil,
 		})
 	}
 
 	return c.JSON(fiber.Map{
-		"status": "success", 
+		"status":  "success",
 		"message": "User found", "data": post,
 	})
 
@@ -37,75 +37,75 @@ func GetPostByPostId(c *fiber.Ctx) error {
 
 func UpdatePostByPostId(c *fiber.Ctx) error {
 	postId := c.Params("postId")
-	return c.SendString("Update post by id:\n"+ postId + string(c.Body()))
+	return c.SendString("Update post by id:\n" + postId + string(c.Body()))
 }
 
 func DeletePostsByPostId(c *fiber.Ctx) error {
 	postId := c.Params("postId")
 	post := models.Post{}
-	result := database.DB.First(&post,"ID = ?", postId)
-	
-	if (result.Error != nil) {
+	result := database.DB.First(&post, "ID = ?", postId)
+
+	if result.Error != nil {
 		return c.Status(404).JSON(fiber.Map{
-			"status": "error",
+			"status":  "error",
 			"message": "Post not found",
-			"data": nil,
+			"data":    nil,
 		})
 	}
 
 	err := database.DB.Delete(&post).Error
 
-	if (err != nil) {
+	if err != nil {
 		return c.Status(500).JSON(fiber.Map{
-			"status": "error",
+			"status":  "error",
 			"message": "Post not deleted",
 		})
 	}
 
 	return c.JSON(fiber.Map{
-		"status": "success", 
+		"status":  "success",
 		"message": "Post deleted",
 	})
 }
 
- func GetPostsByCategoryId(c *fiber.Ctx) error {
+func GetPostsByCategoryId(c *fiber.Ctx) error {
 	categoryId := c.Params("categoryId")
-	return c.SendString("Get posts by category id: "+ categoryId)
+	return c.SendString("Get posts by category id: " + categoryId)
 }
 
 func GetPostsBySubcategoryId(c *fiber.Ctx) error {
 	subcategoryId := c.Params("subcategoryId")
-	return c.SendString("Get posts by subcategory id: "+ subcategoryId)
+	return c.SendString("Get posts by subcategory id: " + subcategoryId)
 }
 
 func GetPostsByUserId(c *fiber.Ctx) error {
 	userId := c.Params("userId")
 
 	user := models.User{}
-	result := database.DB.First(&user,"ID = ?", userId)
-	
-	if (result.Error != nil) {
+	result := database.DB.First(&user, "ID = ?", userId)
+
+	if result.Error != nil {
 		return c.Status(404).JSON(fiber.Map{
-			"status": "error",
+			"status":  "error",
 			"message": "User not found",
-			"data": nil,
+			"data":    nil,
 		})
 	}
 
 	posts := user.Posts
 	result = database.DB.Find(&posts)
 
-	if (result.Error != nil){
+	if result.Error != nil {
 		return c.Status(500).JSON(fiber.Map{
-			"status": "error",
+			"status":  "error",
 			"message": "Could not retrieve posts",
-			"data": nil,
+			"data":    nil,
 		})
 	}
 
 	return c.JSON(fiber.Map{
-		"status": "success",
+		"status":  "success",
 		"message": "Posts found",
-		"data": posts,
+		"data":    posts,
 	})
 }

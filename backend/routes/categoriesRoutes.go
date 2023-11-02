@@ -15,5 +15,4 @@ func CategoriesRoutes(a *fiber.App) {
 
 	route.Get("/:id/subcategories", handlers.GetSubcategoriesByCategoryId)
 
-
 }

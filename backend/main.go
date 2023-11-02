@@ -12,8 +12,6 @@ import (
 	"github.com/joho/godotenv"
 )
 
-
-
 func getPort() string {
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -26,25 +24,25 @@ func getPort() string {
 }
 
 func loadENV() {
-    err := godotenv.Load(".env")
-    if err != nil {
-        fmt.Print("Error loading .env file")
-    }
+	err := godotenv.Load(".env")
+	if err != nil {
+		fmt.Print("Error loading .env file")
+	}
 }
 
 func main() {
-    loadENV()
-    app := fiber.New()
+	loadENV()
+	app := fiber.New()
 
-    database.ConnectDB()
+	database.ConnectDB()
 
-    app.Get("/", func(c *fiber.Ctx) error {
-        return c.SendString("Hello, World 👋!")
-    })
-    routes.PostsRoutes(app)
-    routes.CategoriesRoutes(app)
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello, World 👋!")
+	})
+	routes.PostsRoutes(app)
+	routes.CategoriesRoutes(app)
 	routes.UsersRoutes(app)
 
-    app.Listen(getPort())
-    // log.Fatal(app.Listen(":3000"))
+	app.Listen(getPort())
+	// log.Fatal(app.Listen(":3000"))
 }

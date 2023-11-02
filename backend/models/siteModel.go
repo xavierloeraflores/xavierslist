@@ -6,7 +6,7 @@ import (
 
 type Site struct {
 	gorm.Model `gorm:"embedded"`
-	Name string
-	Url string
-	Locations []Location `gorm:"foreignKey:SiteId"`
+	Name       string
+	Url        string
+	Locations  []Location `gorm:"foreignKey:SiteId"`
 }

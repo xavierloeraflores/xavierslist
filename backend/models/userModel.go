@@ -7,13 +7,12 @@ import (
 )
 
 type User struct {
-	gorm.Model 	`gorm:"embedded"`
-	Username string `gorm:"unique"`
-	Password []byte 
-	Email string `gorm:"unique"`
-	Posts []Post `gorm:"foreignKey:UserId"`
+	gorm.Model `gorm:"embedded"`
+	Username   string `gorm:"unique"`
+	Password   []byte
+	Email      string `gorm:"unique"`
+	Posts      []Post `gorm:"foreignKey:UserId"`
 }
-
 
 func (user *User) HashPassword(password string) {
 	hashedPassword := utils.HashPassword(password)
