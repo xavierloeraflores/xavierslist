@@ -21,6 +21,7 @@ Frontend URL: [https://xavierslist.vercel.app/](https://xavierslist.vercel.app/)
 - [Go](https://golang.org/)
 - [Fiber](https://gofiber.io/)
 - [MySQL](https://www.mysql.com/)
+- [GORM](https://gorm.io/)
 
 #### Deployment
 - [Vercel](https://vercel.com/)
