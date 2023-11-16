@@ -7,7 +7,7 @@ Backend URL: [https://xavierslist-production.up.railway.app](https://xavierslist
 Frontend URL: [https://xavierslist.vercel.app/](https://xavierslist.vercel.app/)
 
 ## Technologies 
-
+- [Tech Stack File](https://github.com/xavierloeraflores/xavierslist/blob/main/techstack.md)
 #### Frontend
 - [Create T3 App](https://create.t3.gg)
 - [TypeScript](https://www.typescriptlang.org/)
