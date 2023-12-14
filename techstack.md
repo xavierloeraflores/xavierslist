@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 xavierloeraflores/xavierslist is built on the following main stack:
+
 - [Golang](http://golang.org/) – Languages
 - [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - [React](https://reactjs.org/) – Javascript UI Libraries
@@ -10,16 +11,19 @@ xavierloeraflores/xavierslist is built on the following main stack:
 - [TypeScript](http://www.typescriptlang.org) – Languages
 - [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
 - [ESLint](http://eslint.org/) – Code Review
-- [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
+- [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
 - [Next.js](https://nextjs.org/) – Frameworks (Full Stack)
 - [Prettier](https://prettier.io/) – Code Review
+- [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 xavierloeraflores/xavierslist is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/1005/O6AczwfV_400x400.png' alt='Golang'/> [Golang](http://golang.org/) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
@@ -28,19 +32,21 @@ xavierloeraflores/xavierslist is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'/> [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
+- <img width='25' height='25' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'/> [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/5936/nextjs.png' alt='Next.js'/> [Next.js](https://nextjs.org/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png' alt='Tailwind CSS'/> [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [xavierloeraflores/xavierslist](https://github.com/xavierloeraflores/xavierslist)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|24<br/>Tools used|11/16/23 <br/>Report generated|
+|38<br/>Tools used|12/14/23 <br/>Report generated|
 |------|------|
 </div>
 
@@ -81,7 +87,7 @@ Full tech stack [here](/techstack.md)
 </tr>
 </table>
 
-## <img src='https://img.stackshare.io/frameworks.svg'/> Frameworks (4)
+## <img src='https://img.stackshare.io/frameworks.svg'/> Frameworks (6)
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'>
@@ -108,11 +114,27 @@ Full tech stack [here](/techstack.md)
 </td>
 
 <td align='center'>
+  <img width='36' height='36' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'>
+  <br>
+  <sub><a href="https://github.com/postcss/postcss">PostCSS</a></sub>
+  <br>
+  <sub></sub>
+</td>
+
+<td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'>
   <br>
   <sub><a href="https://reactjs.org/">React</a></sub>
   <br>
   <sub>v18.2.0</sub>
+</td>
+
+<td align='center'>
+  <img width='36' height='36' src='https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png' alt='Tailwind CSS'>
+  <br>
+  <sub><a href="https://tailwindcss.com">Tailwind CSS</a></sub>
+  <br>
+  <sub></sub>
 </td>
 
 </tr>
@@ -171,17 +193,17 @@ Full tech stack [here](/techstack.md)
 ## Other (2)
 <table><tr>
   <td align='center'>
-  <img width='36' height='36' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'>
+  <img width='36' height='36' src='https://img.stackshare.io/service/48521/default_eea961e4c374e68a1c7eb5bbc9e4a39920890342.png' alt='Zod'>
   <br>
-  <sub><a href="https://en.wikipedia.org/wiki/Shell_script">Shell</a></sub>
+  <sub><a href="https://zod.dev/">Zod</a></sub>
   <br>
   <sub></sub>
 </td>
 
 <td align='center'>
-  <img width='36' height='36' src='https://img.stackshare.io/service/48521/default_eea961e4c374e68a1c7eb5bbc9e4a39920890342.png' alt='Zod'>
+  <img width='36' height='36' src='https://img.stackshare.io/service/25051/default_e6d588b7b89872630cad4650352e935999e0d113.png' alt='superJSON'>
   <br>
-  <sub><a href="https://zod.dev/">Zod</a></sub>
+  <sub><a href="https://github.com/blitz-js/superjson">superJSON</a></sub>
   <br>
   <sub></sub>
 </td>
@@ -190,9 +212,28 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (9)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (21)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (9)
+## <img width='24' height='24' src='https://img.stackshare.io/service/21112/default_1346bbda8fe03e4dce5601323a3ca47a10c1ae36.png'/> Go Packages (13)
+
+|NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
+|:------|:------|:------|:------|:------|:------|
+|[bytebufferpool](https://pkg.go.dev/github.com/valyala/bytebufferpool)|v1.0.0|10/18/23|xavierloeraflores |MIT|N/A|
+|[compress](https://pkg.go.dev/github.com/klauspost/compress)|v1.16.7|10/18/23|xavierloeraflores |BSD-3-Clause|N/A|
+|[crypto](https://pkg.go.dev/golang.org/x/crypto)|v0.14.0|10/26/23|Xavier Loera Flores |BSD-3-Clause|N/A|
+|[fasthttp](https://pkg.go.dev/github.com/valyala/fasthttp)|v1.50.0|10/18/23|xavierloeraflores |MIT|N/A|
+|[go-colorable](https://pkg.go.dev/github.com/mattn/go-colorable)|v0.1.13|10/18/23|xavierloeraflores |MIT|N/A|
+|[go-isatty](https://pkg.go.dev/github.com/mattn/go-isatty)|v0.0.16|10/18/23|xavierloeraflores |MIT|N/A|
+|[go-runewidth](https://pkg.go.dev/github.com/mattn/go-runewidth)|v0.0.15|10/18/23|xavierloeraflores |MIT|N/A|
+|[godotenv](https://pkg.go.dev/github.com/joho/godotenv)|v1.5.1|11/02/23|Xavier Loera Flores |MIT|N/A|
+|[google/uuid](https://pkg.go.dev/github.com/google/uuid)|v1.4.0|10/27/23|xavierloeraflores |BSD-3-Clause|N/A|
+|[inflection](https://pkg.go.dev/github.com/jinzhu/inflection)|v1.0.0|10/26/23|xavierloeraflores |MIT|N/A|
+|[now](https://pkg.go.dev/github.com/jinzhu/now)|v1.1.5|10/18/23|xavierloeraflores |MIT|N/A|
+|[sys](https://pkg.go.dev/golang.org/x/sys)|v0.0.0|10/18/23|xavierloeraflores |BSD-3-Clause|N/A|
+|[tcplisten](https://pkg.go.dev/github.com/valyala/tcplisten)|v1.0.0|10/18/23|xavierloeraflores |MIT|N/A|
+
+
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (8)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
@@ -202,7 +243,6 @@ Full tech stack [here](/techstack.md)
 |[@types/react-dom](https://www.npmjs.com/@types/react-dom)|v18.2.15|11/09/23|Xavier Loera Flores |MIT|N/A|
 |[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v6.10.0|11/09/23|Xavier Loera Flores |MIT|N/A|
 |[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v6.10.0|11/09/23|Xavier Loera Flores |BSD-2-Clause|N/A|
-|[postcss](https://www.npmjs.com/postcss)|v8.4.31|11/09/23|Xavier Loera Flores |MIT|N/A|
 |[react-dom](https://www.npmjs.com/react-dom)|v18.2.0|11/09/23|Xavier Loera Flores |MIT|N/A|
 |[tailwindcss](https://www.npmjs.com/tailwindcss)|v3.3.5|11/09/23|Xavier Loera Flores |MIT|N/A|
 
