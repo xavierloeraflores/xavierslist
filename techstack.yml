@@ -1,7 +1,8 @@
 repo_name: xavierloeraflores/xavierslist
-report_id: c159365710df6125d4ab7e115b118a6a
+report_id: 6b674d1d1d0bb2620d4d1a44615bc216
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T13:12:33+00:00'
+timestamp: '2024-01-05T08:38:35+00:00'
 requested_by: xavierloeraflores
 provider: github
 branch: main
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist
   detection_source: Repo Metadata
 - name: Golang
   description: An open source programming language that makes it easy to build simple,
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -36,6 +39,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist
   detection_source: Repo Metadata
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
@@ -46,6 +50,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist
   detection_source: Repo Metadata
 - name: Autoprefixer
   description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
@@ -55,6 +60,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:32:49.000000000 Z
@@ -80,6 +86,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:32:49.000000000 Z
@@ -92,6 +99,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/3339/rlFcjEdI.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:32:49.000000000 Z
@@ -118,6 +126,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Front-End Frameworks
   image_url: https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:59:07.000000000 Z
@@ -129,6 +138,7 @@ tools:
   category: Data Stores
   sub_category: Databases
   image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/backend/go.mod
   detection_source: backend/go.mod
   last_updated_by: xavierloeraflores
   last_updated_on: 2023-10-18 18:42:45.000000000 Z
@@ -141,6 +151,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:32:49.000000000 Z
@@ -152,6 +163,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist
   detection_source: Repo Metadata
 - name: Prettier
   description: 'Prettier is an opinionated code formatter. '
@@ -175,6 +187,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:32:49.000000000 Z
@@ -184,6 +197,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/48521/default_eea961e4c374e68a1c7eb5bbc9e4a39920890342.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:32:49.000000000 Z
@@ -192,6 +206,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/25051/default_e6d588b7b89872630cad4650352e935999e0d113.png
+  detection_source_url: https://github.com/xavierloeraflores/xavierslist/blob/main/frontend/package.json
   detection_source: frontend/package.json
   last_updated_by: Xavier Loera Flores
   last_updated_on: 2023-11-09 05:32:49.000000000 Z
